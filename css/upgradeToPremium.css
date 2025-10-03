@@ -1,0 +1,310 @@
+/* General Styles */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #061e3a;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h1,
+h2,
+h3,
+p,
+span,
+button,
+input,
+li {
+  font-family: "Poppins", sans-serif;
+}
+
+.close-button {
+  position: fixed;
+  color: #061e3a;
+  background-color: white;
+  right: 10px;
+  top: 10px;
+  padding: 2px;
+  height: 16px;
+  width: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+.close-button:hover {
+  transform: scale(1.1); /* Scale up on hover */
+  cursor: pointer;
+  color: #061e3a !important;
+  background-color: white !important;
+}
+
+/* Specific element styles */
+.wrapper {
+  background-color: #061e3a;
+  border-radius: 15px;
+  width: 310px;
+  margin-top: 50px;
+  height: 530px;
+  overflow: auto;
+}
+
+.container {
+  background-color: #061e3a;
+  padding: 40px 16px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  background-color: #061e3a;
+  height: 80px;
+  width: 100%;
+}
+
+.logo {
+  position: fixed;
+  top: 30px;
+  height: 40px;
+  margin-bottom: 4px;
+  z-index: 99999999;
+}
+
+/* ============================= Product List ============================= */
+.product-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 16px;
+  border-radius: 10px;
+}
+
+.product-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #083f66;
+  border: 2px solid transparent;
+  border-radius: 30px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: border 0.3s;
+}
+
+.product-item.selected {
+  border: 2px solid #fbbf24; /* Yellow border for selected items */
+}
+
+.product-radio {
+  height: 20px;
+  margin: 0px 10px 0px 0px;
+  padding-right: 4px;
+  width: 15px;
+}
+/* Style the radio button when checked */
+.product-radio:checked {
+  accent-color: #fbbf24; /* Sets the color of the radio button */
+}
+
+/* Alternatively, if you want to style the container for better visibility */
+.product-radio:checked + .product-content {
+  border-color: #fbbf24; /* Adjust the border or other styles */
+}
+
+.product-item.disabled {
+  opacity: 1;
+  cursor: not-allowed;
+  /* border: 1px solid #fbbf24; */
+}
+
+.product-item.disabled .product-radio {
+  pointer-events: none; /* Prevent interaction */
+}
+
+.product-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.product-details {
+  display: flex;
+  gap: 0px;
+  flex-direction: column;
+  padding: 0px !important;
+  justify-content: start;
+  align-items: start;
+}
+.product-name {
+  font-size: 14px;
+  /* font-weight: bold; */
+  color: #f8fafc;
+}
+
+.product-description {
+  font-size: 0.7rem;
+  color: #cbd5e1;
+}
+
+.product-price {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #f8fafc; /* White text */
+}
+/* Label for Current Package */
+.current-package-label {
+  position: absolute;
+  top: -10px;
+  left: 50%; 
+  transform: translateX(-50%);
+  background-color: #fbbf24; 
+  color: #083f66;
+  font-size: 8px;
+  padding: 2px 6px;
+  border-radius: 20px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.subscribe-button {
+  width: 100%;
+  background: linear-gradient(90deg, #f4a927, #f6bf35); /* Yellow gradient */
+  color: #ffffff;
+  border: none;
+  font-size: 1rem;
+  border-radius: 30px;
+  margin-bottom: 14px;
+  padding: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.3s;
+  opacity: 1;
+}
+
+.subscribe-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.subscribe-button:not(:disabled):hover {
+  opacity: 5;
+}
+
+/* ======================== Feature section ========================= */
+
+.get-premium {
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.2rem;
+}
+
+.features-container {
+  padding: 10px;
+  margin-bottom: 8px;
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.features li {
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+  line-height: 2rem;
+  color: #d1d5db; /* Light grey text color */
+}
+
+.features li:last-child {
+  margin-bottom: 0; /* Remove bottom margin for the last item */
+}
+
+.check {
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 2px;
+  align-items: center;
+  font-size: 0.7rem;
+  color: #061e3a;
+  width: 12px;
+  height: 12px;
+  background-color: #fbbf24;
+  margin-right: 10px;
+}
+
+.billing-info {
+  font-size: 0.6rem;
+}
+
+.footer-links {
+  font-size: 0.6rem;
+}
+.footer-link {
+  color: white;
+  margin-right: 3px;
+  text-decoration: underline;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+button {
+  /* margin-top: 20px; */
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+/* ================== subscription loader ================  */
+.subscription-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    6,
+    30,
+    58,
+    0.538
+  ); /* semi-transparent background color */
+  backdrop-filter: blur(6px); /* applies blur effect to the background */
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 99999;
+}
+
+/* Loader styles */
+.subscription-loader img {
+  width: 50px; /* Adjust size as needed */
+  height: 50px; /* Adjust size as needed */
+}

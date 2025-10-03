@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../css/login.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <img src="/public/eeagle-logo.svg" alt="eEagle VPN Logo" class="logo" />
+        <div class="subtitle" style="font-size: small">
+          Unrivaled Vigilance, Unmatched Security
+        </div>
+
+        <!-- Google Sign-in Button -->
+        <button id="googleSignInButton" class="button social-button">
+          <img src="/public/google-icon.png" alt="Google Logo" />
+          Sign In with Google
+        </button>
+
+        <!-- Apple Sign-in Button -->
+        <!-- <button class="button social-button">
+          <img src="/public/apple-logo.png" alt="Apple Logo" />
+          Sign In with Apple
+        </button> -->
+
+        <!-- Overlay and loader -->
+        <div id="overlay" class="overlay">
+          <div id="loader" class="loader">
+            <img src="/public/loader.gif" alt="Loading..." />
+          </div>
+        </div>
+
+        <!-- ================== Network Error ================= -->
+        <div id="network-error" class="network-error">
+          <div class="network-error-content">
+            <img src="/public/network-error.svg" alt="Loading..." />
+            <button class="retry-button" id="retry-button">Retry</button>
+          </div>
+        </div>
+
+        <!-- Notification  -->
+        <div class="toast-container" id="toastContainer"></div>
+      </div>
+    </div>
+  </body>
+  <script type="module" src="../js/login.js"></script>
+</html>

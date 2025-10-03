@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "eEagle Proxy Connector",
+  "version": "1.2",
+  "description": "The eEagle Proxy Connector Chrome extension provides a seamless and secure connection to proxy servers, enabling private browsing.",
+  "permissions": ["proxy", "tabs", "storage" , "privacy" , "identity" , "webRequestAuthProvider" , "webRequest"] ,
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self';"
+  },
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_popup": "./html/login.html",
+    "default_icon": {
+      "16": "public/image.png",
+      "48": "public/image.png",
+      "128": "public/image.png"
+    }
+  },
+  "oauth2": {
+    "client_id": "844741812805-mt8iuid0ebjin1c9k06hsi05kjo4qhk6.apps.googleusercontent.com",
+    "scopes": ["openid", "email", "profile"]
+  },
+  "icons": {
+    "16": "public/image.png",
+    "48": "public/image.png",
+    "128": "public/image.png"
+  }
+}

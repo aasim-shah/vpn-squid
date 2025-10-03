@@ -1,0 +1,319 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #061e3a;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 310px;
+  height: 440px;
+}
+
+.close-button {
+  position: fixed;
+  color: #061e3a;
+  background-color: white !important;
+  border: 0px !important;
+  right: 10px;
+  top: 10px;
+  padding: 2px;
+  height: 16px !important;
+  width: 16px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+.close-button:hover {
+  transform: scale(1.1); /* Scale up on hover */
+  cursor: pointer;
+  color: #061e3a !important;
+  background-color: white !important;
+}
+
+h1,
+h2,
+h3,
+p,
+span,
+button,
+input,
+li {
+  font-family: "Poppins", sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #061e3a;
+  padding: 16px 20px;
+  margin-top: 86px;
+  overflow: auto;
+  width: 100%;
+}
+.logo {
+  position: fixed;
+  top: 20px;
+  height: 40px;
+}
+
+.title {
+  position: fixed;
+  top: 50px;
+  font-size: 1.3rem;
+  height: 40px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Current Plan Section */
+.current-plan {
+  padding-bottom: 10px;
+  width: 100%;
+  text-align: left;
+  border-bottom: 1px solid #083f66 !important;
+}
+.current-plan-details {
+  margin-top: 4px;
+  display: flex;
+  font-size: 0.8rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.diamond-icon {
+  height: 20px;
+  width: 20px;
+}
+.plan-info {
+  color: #ffffff;
+}
+
+.plan-title {
+  font-size: 0.9rem;
+}
+
+.plan-details {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 5px 0;
+}
+
+.plan-renewal {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  margin-top: 5px;
+  display: block;
+}
+
+/* Feature List */
+.features-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.features li {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  line-height: 2rem;
+  color: #d1d5db;
+}
+
+.check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+  color: #061e3a;
+  width: 16px;
+  height: 16px;
+  background-color: #fbbf24;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/* Buttons */
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.btn-update-payment{
+  background-color: #083f66;
+  border: 2px solid #083f66;
+  border-radius: 20px;
+  color: white !important;
+  font-size: 0.9rem;
+  display: none;    /* currently hidden */
+  margin-bottom: 4px;
+  padding: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease; 
+}
+.btn-upgrade {
+  background-color: #083f66;
+  border: 2px solid #083f66;
+  border-radius: 20px;
+  color: white !important;
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+  padding: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.btn-cancel {
+  background-color: transparent;
+  border: 2px solid #083f66;
+  border-radius: 20px;
+  color: white !important;
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+  padding: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+.btn-cancel:hover{
+  border: 2px solid white !important;;
+}
+.btn-update-payment:hover,
+.btn-upgrade:hover {
+  border: 2px solid #ffb800;
+}
+
+.footer-links {
+  margin-top: 10px;
+}
+/* Footer Links */
+.footer-links {
+  font-size: 0.6rem;
+}
+.footer-link {
+  color: white;
+  margin-right: 3px;
+  text-decoration: underline;
+}
+
+/* Overlay styles */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    6,
+    30,
+    58,
+    0.538
+  ); /* semi-transparent background color */
+  backdrop-filter: blur(6px); /* applies blur effect to the background */
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 99999;
+}
+
+/* Loader styles */
+.loader img {
+  width: 50px; /* Adjust size as needed */
+  height: 50px; /* Adjust size as needed */
+}
+/* ============================ Upgrade Subscription Restrictions ============================= */
+.upgrade-restriction {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 444;
+}
+
+.upgrade-sub-dev {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-size: 16px;
+  padding: 12px;
+  width: 85%;
+  position: relative;
+}
+
+.close-error:hover {
+  background-color: #dee2e6;
+}
+
+/* Error Icon */
+.error-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-icon img {
+  width: 50px; /* Adjust the size of the SVG */
+  height: 50px;
+}
+
+/* Error Heading */
+.error-heading {
+  color: #e63946;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 10px 10px 0px 10px;
+}
+
+/* Error Message */
+.error-message {
+  color: #6c757d;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.subscription-action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px !important;
+}
+/* OK Button */
+.upgrade-sub-ok-btn,
+.sub-modal-close-btn,
+.sub-confirm-btn,
+.error-cancel-btn {
+  background-color: #061e3a;
+  color: #ffffff;
+  font-size: 14px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  width: 80px;
+  padding: 6px 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.upgrade-sub-ok-btn:hover,
+.sub-modal-close-btn:hover,
+.sub-confirm-btn:hover,
+.error-cancel-btn:hover {
+  background-color: #003366;
+}

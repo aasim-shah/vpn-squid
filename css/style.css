@@ -1,0 +1,150 @@
+/*============ This is common style sheet which is used in all files============ */
+
+/* ============== css for network error div ================= */
+.network-error {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    6,
+    30,
+    58,
+    0.538
+  ); /* semi-transparent background color */
+  backdrop-filter: blur(6px); /* applies blur effect to the background */
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 99999;
+}
+.upgrade-restriction ,.popup-screen-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    6,
+    30,
+    58,
+    0.538
+  ); /* semi-transparent background color */
+  backdrop-filter: blur(0.5px);
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 99999;
+}
+
+.network-error-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.network-error img {
+  width: 150px; /* Adjust size as needed */
+  height: 150px; /* Adjust size as needed */
+}
+
+.retry-button {
+  background-color: #ffffff;
+  padding: 8px 24px;
+  border: none;
+  font-size: 16px;
+  border-radius: 5px;
+  color: #061e3a;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.retry-button:hover {
+  background-color: #ffffff !important;
+  color: #061e3a !important;
+  transform: scale(1.1); /* Zoom in effect (10% larger) */
+}
+
+/* =============================== notifications css ============================= */
+.toast-container {
+  position: fixed;
+  bottom: 6px;
+  left: 0;
+  width: 100%;
+  z-index: 9999999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.toast {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  margin-bottom: 4px;
+  border-radius: 40px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+  color: #fff;
+  background-color: #333;
+  opacity: 0;
+  animation: fadeInOut 6s ease-in-out forwards;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.toast-success {
+  background-color: #4caf50; /* Green for success */
+}
+
+.toast-error {
+  background-color: #f44336; /* Red for error */
+}
+
+/* ============================= loader ================= */
+/* Overlay styles */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    6,
+    30,
+    58,
+    0.538
+  ); /* semi-transparent background color */
+  backdrop-filter: blur(6px); /* applies blur effect to the background */
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 99999;
+}
+/* Loader styles */
+.loader img {
+  width: 50px;
+  height: 50px;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  10%,
+  90% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}

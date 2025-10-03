@@ -1,0 +1,374 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #061e38;
+  color: white;
+  display: flex;
+  /* align-items: center; */
+  width: 310px;
+  height: 440px;
+}
+
+.close-button {
+  position: fixed;
+  color: #061e3a;
+  background-color: white !important;
+  border: 0px !important;
+  right: 10px;
+  top: 10px;
+  padding: 2px;
+  height: 16px !important;
+  width: 16px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+.close-button:hover {
+  transform: scale(1.1); /* Scale up on hover */
+  cursor: pointer;
+  color: #061e3a !important;
+  background-color: white !important;
+}
+
+h1,
+h2,
+h3,
+p,
+span,
+button,
+input,
+li {
+  font-family: "Poppins", sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  background-color: #061e3a;
+  margin-top: 50px;
+  padding: 16px 20px;
+  overflow: auto;
+  width: 100%;
+}
+.logo {
+  position: fixed;
+  top: 20px;
+  height: 40px;
+  left: 16px;
+}
+
+.close-button {
+  position: fixed;
+  color: #061e3a;
+  background-color: white;
+  border: none;
+  right: 16px;
+  top: 30px;
+  padding: 5px;
+  height: 20px;
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.close-button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.logo {
+  position: fixed;
+  top: 20px;
+  height: 40px;
+}
+
+/* Add Card Button */
+.add-card-button-wrapper {
+  width: 100%;
+  text-align: right;
+}
+
+.add-card-button {
+  color: white;
+  margin-top: 10px;
+  background-color: transparent;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 15px;
+  border: none;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.add-card-button:hover {
+  background-color: transparent !important;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+/* Attached Cards */
+.attached-card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+/* Card container */
+
+.card {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 20px;
+  border-radius: 50px;
+  background-color: #0d2a48;
+  transition: background-color 0.3s ease;
+}
+
+.card:hover {
+}
+
+.card-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.circles {
+  color: #566a7f;
+  font-size: 0.8rem;
+}
+
+.last4 {
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  margin-left: 4px;
+  border-radius: 4px;
+}
+
+.card-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.delete-icon {
+  position: absolute;
+  top: -7px;
+  right: 4px;
+  display: fixed;
+  width: 14px;
+  height: 14px;
+  background-color: #983131;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 4px;
+  color: white;
+}
+
+.card:hover .delete-icon {
+  display: block; /* Show delete icon on hover */
+}
+
+.card:hover .card-content {
+  justify-content: space-between;
+}
+
+/* =================== popup div ================= */
+
+.popup-div {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-size: 16px;
+  padding: 12px;
+  width: 85%;
+  position: relative;
+  color: #6c757d;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.popup-action-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px !important;
+}
+/* OK Button */
+.popup-cancel-btn,
+.popup-confirm-btn {
+  background-color: #061e3a;
+  color: #ffffff;
+  font-size: 14px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  width: 80px;
+  padding: 6px 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.popup-confirm-btn:hover,
+.popup-cancel-btn:hover {
+  background-color: #003366;
+}
+
+/* ======================== add card css ========================= */
+.close-modal {
+  position: fixed;
+  color: white;
+  background-color: #061e3a !important;
+  border: 0px !important;
+  right: 22px;
+  top: 17%;
+  padding: 2px;
+  height: 16px !important;
+  width: 16px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+.close-modal:hover {
+  transform: scale(1.1); /* Scale up on hover */
+  cursor: pointer;
+  color: white !important;
+  background-color: #061e3a !important;
+}
+
+.add-card-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent !important;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+}
+
+.card-form {
+  display: none;
+  flex-direction: column;
+  gap: 24px;
+}
+.input-div {
+  position: relative;
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid white !important;
+  border-radius: 50px;
+  padding: 6px;
+  transition: border-color 0.3s ease; /* Smooth transition for border */
+}
+
+.floating-label {
+  position: absolute;
+  top: -10px;
+  left: 12px;
+  background-color: #061e38;
+  padding: 0 4px;
+  color: #545e7d !important;
+  font-size: 14px;
+  transition: color 0.3s ease; /* Smooth transition for color */
+}
+
+.input-img {
+  color: white !important;
+  height: 18px;
+  width: 18px;
+  margin-right: 4px;
+}
+
+input[type="text"] {
+  border: none;
+  outline: none;
+  width: 100%;
+  padding-left: 8px;
+}
+
+.card-form input {
+  padding: 6px;
+  border: none !important;
+  background-color: transparent !important;
+  font-size: 0.9rem;
+  color: #a9acb4;
+}
+
+.input-div:focus-within {
+  border: 2px solid #0055aa !important;
+}
+
+.input-div:focus-within .floating-label {
+  color: #0055aa !important;
+}
+.input-div:focus-within .input-img {
+  color: #0055aa !important;
+}
+
+.save-card-button {
+  background-color: #003366;
+  color: white;
+  padding: 8px 15px;
+  margin-top: 4px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.save-card-button:hover {
+  background-color: #0055aa;
+}
+
+/* ====================== remove card button ================= */
+
+.remove-card {
+  position: absolute; /* Position the button relative to the card */
+  top: -6px;
+  right: -1px;
+  color: white;
+  background-color: #0055aa !important;
+  border: 0px !important;
+  padding: 2px;
+  height: 16px !important;
+  width: 16px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer; /* Indicate clickability */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add slight shadow for better visibility */
+  transition: transform 0.3s ease; /* Smooth transition for scaling */
+}

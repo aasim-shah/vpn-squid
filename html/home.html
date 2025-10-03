@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>eEagle VPN</title>
+    <link rel="stylesheet" href="../css/home.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <img src="/public/menu.svg" alt="Menu Icon" class="menu-icon" />
+    <img src="/public/eeagle-logo.svg" alt="eEagle VPN Logo" class="logo" />
+    <div class="header"></div>
+    <div class="wrapper scrollbar">
+      <div class="container">
+        <!-- Side Menu -->
+        <div class="side-menu">
+          <button class="close-btn">×</button>
+
+          <div class="profile-container">
+            <img
+              src="/public/google-icon.png"
+              alt="Profile Image"
+              class="profile-image"
+            />
+
+            <div class="profile-details">
+              <h3 class="user-name">John Doe</h3>
+              <p class="user-email">john.doe@exa ...</p>
+            </div>
+          </div>
+          <div class="">
+            <!-- <button id="logoutButton" class="logout-button">Logout</button> -->
+            <ul class="menu-items">
+              <li>
+                <a href="#" id="subscriptionMenu">
+                  <img
+                    src="/public/dollor.svg"
+                    alt="Subscriptions Icon"
+                    class="icon"
+                  />
+                  Subscription
+                  <span class="menu-right" id="subscriptionPlan">---</span>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://eeaglevpn.com/faq/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="/public/Question Circle.svg"
+                    alt="FAQs Icon"
+                    class="icon"
+                  />
+                  FAQs
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://eeaglevpn.com/privacy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="/public/privacy.svg"
+                    alt="Privacy Policy Icon"
+                    class="icon"
+                  />
+                  Privacy Policy
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://eeaglevpn.com/terms"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="/public/notes-icon.svg"
+                    alt="Terms of Use Icon"
+                    class="icon"
+                  />
+                  Terms of Use
+                </a>
+              </li>
+
+              <li id="logoutButton">
+                <a href="#">
+                  <img
+                    src="/public/logout.png"
+                    style="width: 24px; height: 22px"
+                    alt="Logout"
+                    class="icon"
+                  />
+                  Logout
+                </a>
+              </li>
+            </ul>
+
+            <div class="footer">
+              <div class="version-container">Version 1.0.0</div>
+            </div>
+          </div>
+          <!-- Overlay and Loader -->
+          <div id="overlay" class="overlay">
+            <div id="loader" class="loader">
+              <img src="/public/loader.gif" alt="Loading..." />
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Section -->
+        <main class="main-content" id="mainContent">
+          <div class="img-status-div">
+            <button class="power-button" id="powerButton">
+              <img
+                src="/public/connect.svg"
+                alt="Power Button"
+                class="power-button-img"
+              />
+            </button>
+            <div class="status">Connect</div>
+          </div>
+
+          <div class="location-container" id="locationContainer">
+            <img
+              src="/public/smart-location.svg"
+              alt="Location Icon"
+              class="location-icon"
+              id="locationIcon"
+            />
+            <span class="location-text" id="selectedLocation"
+              >Smart Location</span
+            >
+            <span class="location-arrow" id="locationArrow">&rsaquo;</span>
+          </div>
+        </main>
+
+        <!-- Overlay and Loader -->
+        <div id="overlay" class="overlay">
+          <div id="loader" class="loader">
+            <img src="/public/loader.gif" alt="Loading..." />
+          </div>
+        </div>
+
+        <!-- Upgrade to premium -->
+        <div id="premium-overlay" class="premium-overlay">
+          <div id="premium-loader" class="premium-loader">
+            <img src="/public/premium-icon.svg" alt="Loading..." />
+          </div>
+          <button class="upgrade-button">Upgrade to premium</button>
+        </div>
+
+        <!-- ================== Network Error ================= -->
+        <div id="network-error" class="network-error">
+          <div class="network-error-content">
+            <img src="/public/network-error.svg" alt="Loading..." />
+            <button class="retry-button" id="retry-button">Retry</button>
+          </div>
+        </div>
+
+        <!-- Notification  -->
+        <div class="toast-container" id="toastContainer"></div>
+      </div>
+    </div>
+    <script type="module" src="../js/home.js"></script>
+  </body>
+</html>

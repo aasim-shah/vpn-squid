@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Update Payment</title>
+    <link rel="stylesheet" href="../css/updatePayment.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="script-src 'self' https://js.stripe.com; object-src 'self'; frame-src https://js.stripe.com;"
+    />
+  </head>
+  <body>
+    <button class="close-button" aria-label="Close">×</button>
+    <img src="/public/eeagle-logo.svg" alt="eEagle VPN Logo" class="logo" />
+
+    <div class="wrapper">
+      <hr
+        style="
+          background-color: #0d2a48;
+          width: 100%;
+          height: 2px;
+          border: none;
+          margin-bottom: 16px;
+        "
+      />
+
+      <!-- Attached Cards -->
+      <div class="card-container">
+        <div id="attachedCard" class="attached-card"></div>
+        <div class="add-card-button-wrapper">
+          <button class="add-card-button" aria-label="Add new card">
+            + Add New Card
+          </button>
+        </div>
+
+        <!-- Stripe Card Element will be inserted here -->
+        <div id="card-element"></div>
+      </div>
+
+      <div id="addCardModal" class="add-card-modal">
+        <div class="modal-content">
+          <form id="addCardForm" class="card-form">
+            <div class="input-div">
+              <label for="cardNumber" class="floating-label">Card Number</label>
+              <input
+                type="text"
+                id="cardNumber"
+                placeholder="0000 0000 0000 0000"
+                required
+              />
+              <img src="../public/card.svg" class="input-img" />
+            </div>
+
+            <div class="" style="display: flex; gap: 10px">
+              <div class="input-div">
+                <label for="expiry" class="floating-label">Expiry Date</label>
+                <input type="text" id="expMonth" placeholder="MM/YY" required />
+                <img src="../public/card.svg" class="input-img" />
+              </div>
+              <div class="input-div">
+                <label for="cvc" class="floating-label">CVC</label>
+                <input type="text" id="cvc" placeholder="CVC" required />
+                <img src="../public/card.svg" class="input-img" />
+              </div>
+            </div>
+            <div class="input-div">
+              <label for="holderName" class="floating-label"
+                >Cardholder Name</label
+              >
+              <input
+                type="text"
+                id="holderName"
+                placeholder="Enter Cardholder full name"
+                required
+              />
+              <img src="../public/card.svg" class="input-img" />
+            </div>
+
+            <button type="submit" class="save-card-button">Save Card</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- ================== Popup message ================= -->
+      <div class="popup-screen-overlay">
+        <div class="popup-div">
+          <p class="error-message">
+            Are you sure you want to remove this card?
+          </p>
+
+          <div class="popup-action-buttons">
+            <button class="popup-cancel-btn">Cancel</button>
+            <button class="popup-confirm-btn">Confirm</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Overlay and loader -->
+      <div id="overlay" class="overlay">
+        <div id="loader" class="loader">
+          <img src="/public/loader.gif" alt="Loading..." />
+        </div>
+      </div>
+
+      <!-- Toast Container -->
+      <div class="toast-container" id="toastContainer"></div>
+    </div>
+
+    <script src="../js/updatePayment.js"></script>
+  </body>
+</html>

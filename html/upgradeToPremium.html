@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Subscriptions</title>
+    <link rel="stylesheet" href="../css/upgradeToPremium.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <button class="close-button">×</button>
+
+    <img src="/public/eeagle-logo.svg" alt="eEagle VPN Logo" class="logo" />
+    <div class="wrapper">
+      <div class="container">
+        <span class="get-premium">Get Premium!</span>
+
+        <!-- Feature List -->
+        <div class="features-container">
+          <ul class="features">
+            <!-- <li><span class="check">✔</span> OpenVPN Protocol</li> -->
+            <li><span class="check">✔</span> Worldwide Locations</li>
+            <!-- <li><span class="check">✔</span> No Ads Interruption</li> -->
+          </ul>
+        </div>
+
+        <!-- Billing Information -->
+        <p class="billing-info">
+          Billing starts today. Renews automatically on intervals.
+        </p>
+
+        <!-- Product List -->
+        <div class="product-list"></div>
+
+        <!-- Footer Links -->
+        <div class="footer-links">
+          <a
+            href="https://eeaglevpn.com/privacy"
+            class="footer-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Privacy Policy
+          </a>
+          |
+          <!-- | <a href="#" class="footer-link">Details</a> | -->
+          <a
+            href="https://eeaglevpn.com/terms"
+            class="footer-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Terms of Use
+          </a>
+        </div>
+      </div>
+      <!-- subscription loader -->
+      <div id="subscription-loader" class="subscription-loader">
+        <div id="loader" class="loader">
+          <img src="/public/loader.gif" alt="Loading..." />
+        </div>
+      </div>
+
+      <!-- ================== Network Error ================= -->
+      <div id="network-error" class="network-error">
+        <div class="network-error-content">
+          <img src="/public/network-error.svg" alt="Loading..." />
+          <button class="retry-button" id="retry-button">Retry</button>
+        </div>
+      </div>
+      <!-- Notification  -->
+      <div class="toast-container" id="toastContainer"></div>
+    </div>
+
+    <script type="module" src="../js/upgradeToPremium.js"></script>
+  </body>
+</html>

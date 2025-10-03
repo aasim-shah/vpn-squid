@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upgrade Subscriptions</title>
+    <link rel="stylesheet" href="../css/upgradeSubscriptions.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <button class="close-button">×</button>
+    <h2 class="title">Subscription</h2>
+    <img src="/public/eeagle-logo.svg" alt="eEagle VPN Logo" class="logo" />
+
+    <div class="wrapper">
+      <!-- Current Plan Section -->
+      <div class="current-plan">
+        <div class="plan-info">
+          <span class="plan-title">Current Plan</span>
+
+          <div class="current-plan-details">
+            <span class="plan-details">
+              <img
+                src="/public/premium-icon.svg"
+                alt="diamond"
+                class="diamond-icon"
+              />
+              One Month Subscription
+            </span>
+            <div>$3.99</div>
+          </div>
+
+          <span class="plan-renewal">Renews on 00-00-0000</span>
+        </div>
+      </div>
+
+      <!-- Feature List -->
+      <div class="features-container">
+        <ul class="features">
+          <!-- <li><span class="check">✔</span> OpenVPN Protocol</li> -->
+          <li><span class="check">✔</span> Worldwide Locations</li>
+          <!-- <li><span class="check">✔</span> No Ads Interruption</li> -->
+        </ul>
+      </div>
+
+      <!-- Buttons -->
+      <div class="actions">
+        <button class="btn-upgrade">Upgrade Subscription</button>
+        <button class="btn-update-payment">Update Payment</button>
+        <button class="btn-cancel">Cancel Subscription</button>
+      </div>
+
+      <!-- Footer Links -->
+      <div class="footer-links">
+        <a
+          href="https://eeaglevpn.com/privacy"
+          class="footer-link"
+          target="_blank"
+        >
+          Privacy Policy
+        </a>
+        |
+        <a
+          href="https://eeaglevpn.com/terms"
+          class="footer-link"
+          target="_blank"
+        >
+          Terms of Use
+        </a>
+      </div>
+
+      <!-- ================== Network Error ================= -->
+      <div id="network-error" class="network-error">
+        <div class="network-error-content">
+          <img src="/public/network-error.svg" alt="Loading..." />
+          <button class="retry-button" id="retry-button">Retry</button>
+        </div>
+      </div>
+
+      <!-- ================== Upgrade subscription error ================= -->
+      <div class="upgrade-restriction">
+        <div class="upgrade-sub-dev">
+          <!-- Error Icon -->
+          <!-- <div class="error-icon">
+            <img src="/public/error.svg" alt="Error Icon" />
+          </div> -->
+
+          <!-- Error Message -->
+          <!-- <p class="error-heading">Error</p> -->
+          <p class="error-message">
+            Kindly upgrade your subscription from the platform it was purchased.
+          </p>
+
+          <div class="subscription-action">
+            <button class="upgrade-sub-ok-btn">Ok</button>
+            <button class="sub-modal-close-btn">Close</button>
+            <button class="sub-confirm-btn">Confirm</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================== Loader ================= -->
+      <div id="overlay" class="overlay">
+        <div id="loader" class="loader">
+          <img src="/public/loader.gif" alt="Loading..." />
+        </div>
+      </div>
+
+      <!-- Toast Container -->
+      <div class="toast-container" id="toastContainer"></div>
+    </div>
+
+    <script type="module" src="../js/upgradeSubscriptions.js"></script>
+  </body>
+</html>
